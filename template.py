@@ -1,6 +1,7 @@
 import json
 import requests
 
+
 def get():
   # Parameters
   ploads = {'things':2,'total':25}
@@ -12,6 +13,7 @@ def get():
   print(r.content)
   print()
   print(r.json)
+
 
 def get2(toPath):
   # Perform HTTP GET request

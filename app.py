@@ -1,3 +1,4 @@
 import template
 
-print(template.get2('payload.json'))
+template.get()
+template.get2('payload.json')
