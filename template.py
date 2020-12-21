@@ -18,7 +18,10 @@ def get():
 def get2(toPath):
   # Perform HTTP GET request
   r = requests.get('https://api.github.com/events')
+  data = r.json()
+  # Check if error occurred
+  print(r.raise_for_status())
 
   # Save json response to output file
   with open(toPath, 'w') as jsonF:
-    jsonF.write(json.dumps(r.json(), indent=4))
+    jsonF.write(json.dumps(data, indent=4))
